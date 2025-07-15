@@ -23,7 +23,7 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 mqttc.on_publish = on_publish
 
 mqttc.user_data_set(unacked_publish)
-mqttc.connect("192.168.1.106:8123")
+mqttc.connect("192.168.1.106", 8123)
 mqttc.loop_start()
 
 # Our application produce some messages
